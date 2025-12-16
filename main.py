@@ -14,7 +14,7 @@ pygame.init()
 screen = pygame.display.set_mode((BREEDTE, HOOGTE))
 clock = pygame.time.Clock()
 
-player = Player(100, HOOGTE -64)
+player = Player(100, 350 - PLAYER_GROOTTE)
 
 running = True
 while running:
@@ -24,7 +24,7 @@ while running:
             running = False
 
     keys = pygame.key.get_pressed()
-    player.update(keys, platforms)  # platforms meegeven aan update
+    player.update(keys, platforms)  
 
     screen.fill(BLAUW)
     player.draw(screen)
